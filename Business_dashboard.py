@@ -41,14 +41,14 @@ with st.expander("More Information"):
   st.write("The data is collected from nowhere.")
 
 placeholder = st.empty()
-no = 0
 
-for i in range(6):
-  placeholder = st.write(f"Loading data...{no}% complete")
-  no=+20
+for i in range(5):
+  
+  placeholder.write(f"Loading data...{i*20}% complete")
+  
   time.sleep(1)
 
-placeholder = st.write("There is no business insights.")
+placeholder.write("There is no business insights.")
 
 box = st.selectbox(["Q1", "Q2", "Q3", "Q4"])
 
@@ -56,7 +56,9 @@ growth = st.slider(min_value = 0, max_value=100)
 st.metric(f"${revenue[box]*(1+growth/100):,.2f}M")
 
 st.bar_chart(revenue, x="Quarter", y="Revenue")
-st.button("Keep pushing for growth!")
+button = st.button("Click")
+if button:
+  st.success("Keep pushing for growth!")
 
 
   
