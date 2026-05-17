@@ -4,9 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 st.header("Contact Info Collector")
-contact = []
+
 with st.form(key="my_form"):
-  
+    contact =[]
     first_name = st.text_input("First name:").title()
     last_name = st.text_input("Last name:").title()
     no = st.number_input("Favorite number:")
