@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import csv
 
 st.header("Contact Info Collector")
-contact =[]
+
 with st.form(key="my_form"):
     
     first_name = st.text_input("First name:").title()
@@ -14,6 +14,7 @@ with st.form(key="my_form"):
     button = st.form_submit_button("Register")
     if button:
         try:
+            contacts = []
             if first_name.strip() == "" or last_name.strip() == "":
                 raise ValueError
             no = int(no)
