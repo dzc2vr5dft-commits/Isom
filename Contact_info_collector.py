@@ -6,6 +6,10 @@ import csv
 
 st.header("Contact Info Collector")
 
+with open ("contacts.csv", "w") as file:
+    writer = csv.DictWriter(file, fieldnames = ["First Name", "Last Name", "Favorite Number"])
+    writer.writeheader()
+    
 with st.form(key="my_form"):
     
     first_name = st.text_input("First name:").title()
@@ -26,9 +30,8 @@ with st.form(key="my_form"):
         else:
             contact.append({"First Name": first_name, "Last Name": last_name, "Favorite Number": no})
         
-            with open ("contacts.csv", "w") as file:
-                writer = csv.DictWriter(file, fieldnames = ["First Name", "Last Name", "Favorite Number"])
-                writer.writeheader()
+            with open ("contacts.csv", "a") as file:
+                
                 for i in contact:
                     writer.writerow(i)
             data = pd.read_csv("contacts.csv")
