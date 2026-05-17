@@ -12,7 +12,7 @@ with st.form(key="my_form"):
     no = st.number_input("Favorite number:")
     button = st.form_submit_button("Register")
     if button:
-      if first_name.strip() == "" or last_name.strip() == ""
+      if first_name.strip() == "" or last_name.strip() == "":
         raise ValueError
       no = int(no)
     
