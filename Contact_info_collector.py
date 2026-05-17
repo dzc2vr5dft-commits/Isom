@@ -14,7 +14,7 @@ with st.form(key="my_form"):
     button = st.form_submit_button("Register")
     if button:
         try:
-            contacts = []
+            contact = []
             if first_name.strip() == "" or last_name.strip() == "":
                 raise ValueError
             no = int(no)
