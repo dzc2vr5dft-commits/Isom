@@ -53,7 +53,7 @@ placeholder.write("There is no business insights.")
 box = st.selectbox("Select a box", ["Q1", "Q2", "Q3", "Q4"])
 
 growth = st.slider("Growth", min_value = 0, max_value=100)
-st.metric(f"${revenue[box]*(1+growth/100):,.2f}M")
+st.write(f"${revenue[box]*(1+growth/100):,.2f}M")
 
 st.bar_chart(revenue, x="Quarter", y="Revenue")
 button = st.button("Click")
