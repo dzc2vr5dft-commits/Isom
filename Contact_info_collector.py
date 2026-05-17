@@ -31,9 +31,10 @@ with st.form(key="my_form"):
             contact.append({"First Name": first_name, "Last Name": last_name, "Favorite Number": no})
         
             with open ("contacts.csv", "a") as file:
-                
+                writer = csv.DictWriter(file, fieldnames = ["First Name", "Last Name", "Favorite Number"])
                 for i in contact:
                     writer.writerow(i)
+                    
             data = pd.read_csv("contacts.csv")
             st.success("Data added successfully!")
         
