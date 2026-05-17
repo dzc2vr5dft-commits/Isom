@@ -30,10 +30,10 @@ with st.form(key="my_form"):
                 writer.writeheader()
                 for i in contact:
                     writer.writerow(i)
-                data = pd.read_csv("contacts.csv")
-                st.success("Data added successfully!")
-            
-                st.dataframe(data)
+            data = pd.read_csv("contacts.csv")
+            st.success("Data added successfully!")
+        
+            st.dataframe(data)
           
 
 
