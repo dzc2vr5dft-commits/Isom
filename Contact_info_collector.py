@@ -26,9 +26,9 @@ with st.form(key="my_form"):
             no = int(no)
     
         except ValueError:
-            print("Invalid input.")
+            st.write("Invalid input.")
         except Exception as i:
-            print(i)
+            st.write(i)
         else:
             contact = {"First Name": first_name, "Last Name": last_name, "Favorite Number": no}
         
