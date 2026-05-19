@@ -41,16 +41,17 @@ tab1, tab2, tab3 = st.tabs(["Plot", "Data", "Chart"])
 with tab1:
   st.write("Here goes a chart")
   st.metric("Sales", f"1000 +5%")
-  placeholder = st.empty()
-  while True:
-    placeholder.write(f"A new number: {np.random.randint(1,11)}")
-    time.sleep(2)
-
   sales = {"Product": ["A", "B"], "Sales": [100,200]}
   df = pd.DataFrame(sales)
   st.write (f"Sum: {df["Sales"].sum()}")
   filtered = [df[df["Product"].isin("A", "C")]]
   st.dataframe(filtered)
+  placeholder = st.empty()
+  while True:
+    placeholder.write(f"A new number: {np.random.randint(1,11)}")
+    time.sleep(2)
+
+  
   
 
 with tab2:
