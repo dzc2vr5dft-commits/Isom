@@ -12,7 +12,7 @@ st.write ("IDK what it does.")
 st.markdown("**Hello** *Bye*")
 
 with st.sidebar:
-  color = st.multiselect("Favourite colors", ["Red", "Green", "Blue"], default = "Red")
+  color = st.multiselect("Favourite colors", ["Red", "Green", "Blue"], default = ["Red"])
   features = st.checkbox("Enable extra features", value = True)
   number = st.slider("A slider", min_value = 0, max_value = 100, value = 50)
 
@@ -35,7 +35,7 @@ with col2:
 with col3:
   bt3 = st.button("C")
 
-tab1, tab, tab3 = st.tabs(["Plot", "Data", "Chart"])
+tab1, tab2, tab3 = st.tabs(["Plot", "Data", "Chart"])
 
 with tab1:
   st.write("Here goes a chart")
