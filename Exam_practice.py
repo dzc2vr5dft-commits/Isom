@@ -45,7 +45,7 @@ with tab1:
   sales = {"Product": ["A", "B"], "Sales": [100,200]}
   df = pd.DataFrame(sales)
   st.write (f"Sum: {df["Sales"].sum()}")
-  filtered = [df[df["Product"].isin(["A", "C"])]]
+  filtered = df[df["Product"].isin(["A", "C"])]
   st.dataframe(filtered)
   
   placeholder = st.empty()
