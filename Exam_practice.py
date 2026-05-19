@@ -83,7 +83,7 @@ with tab3:
 
   
   
-option = opton_menu("Main Menu", options =["Home", "Settings", "About"],
+option = option_menu("Main Menu", options =["Home", "Settings", "About"],
                     icons = ["house", "gear", "info-cicle"],
                     default_index = 0)
 if option == "Home":
