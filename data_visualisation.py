@@ -2,6 +2,10 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
+st.title("Title")
+st.header("Header")
+st.subheader("Subheader")
+
 # Step 3: Generate Random Sales Data
 sales_data = np.random.rand(100) * 1000
 
