@@ -47,6 +47,18 @@ with tab1:
 
 with tab2:
   st.write("Here goes a table.")
+  with st.form(key = "user_form"):
+    email = st.text_input("Email")
+    score = st.number_input("Score", min_value = 0, max_value =100)
+    submit = st.form_submit_button("Submit")
+  if submit:
+    st.success(f"Email: {email}, Score: {score}")
+
+file = st.file_uploader("Upload a csv file", type = "csv")
+if file:
+  st.dataframe(file)
+else:
+  st.write("Please upload a CSV file")
 
 
 
