@@ -53,14 +53,14 @@ with tab2:
     submit = st.form_submit_button("Submit")
   if submit:
     st.success(f"Email: {email}, Score: {score}")
-
+  
   file = st.file_uploader("Upload a csv file", type = "csv")
   if file:
     st.dataframe(file)
   else:
     st.write("Please upload a CSV file")
-
-
+  
+  
 
 
 
