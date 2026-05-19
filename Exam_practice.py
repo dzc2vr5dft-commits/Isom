@@ -45,7 +45,7 @@ with tab1:
     placeholder.write(f"A new number: {np.random.randint(1,11)}")
     time.sleep(2)
 
-with tab2:
+
   st.write("Here goes a table.")
   with st.form(key = "user_form"):
     email = st.text_input("Email")
