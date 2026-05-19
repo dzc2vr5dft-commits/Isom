@@ -42,7 +42,7 @@ with tab1:
   st.metric("Sales", f"1000 +5%")
   placeholder = st.empty()
   while True:
-    placeholder.write(f"A new number: {np.random.randint(1,11)})
+    placeholder.write(f"A new number: {np.random.randint(1,11)}")
     time.sleep(2)
 
 with tab2:
