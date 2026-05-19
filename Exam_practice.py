@@ -9,3 +9,18 @@ st.header("Introduction")
 st.subheader("Key Metrics")
 st.write ("IDK what it does.")
 st.markdown("**Hello** *Bye*")
+
+with st.sidebar:
+  color = st.multiselect("Favourite colors", ["Red", "Green", "Blue"], default = "Red")
+  features = st.checkbox("Enable extra features", value = True)
+  number = st.slider("A slider", min_value = 0, max_value = 100, value = 50)
+
+st.write(f"Your favourite colour: {color}")
+st.write(f"Enable extra features: {features}")
+st.write(f"Slider number: {number}")
+
+name = st.text_input("Name")
+age = st.number_input("Age", min_value = 1, max_value = 120)
+button =st.button("Submit")
+if button:
+  st.success(f"Hello {name}, you are {age} years old.")
