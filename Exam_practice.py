@@ -52,7 +52,7 @@ with tab1:
   st.data_editor(filtered)
 
   st.write("Here goes a table.")
-  with st.form(key = "user_form"):
+  with st.form(key = "userform"):
     email = st.text_input("Email")
     score = st.number_input("Score", min_value = 0, max_value =100)
     submit = st.form_submit_button("Submit")
