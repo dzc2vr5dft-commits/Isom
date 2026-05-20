@@ -47,6 +47,9 @@ with tab1:
   st.write (f"Sum: {df["Sales"].sum()}")
   filtered = df[df["Product"].isin(["A", "C"])]
   st.dataframe(filtered)
+
+  st.table(sales)
+  st.data_editor(filtered)
   
   placeholder = st.empty()
   while True:
