@@ -64,6 +64,48 @@ with tab1:
     st.dataframe(file)
   else:
     st.write("Please upload a CSV file")
+
+  data = pd.DataFrame({
+    "Period": [1,2,3,4],
+    "Sales": [10, 20, 15, 30],
+    "Profit": [5, 10, 8, 20]}).set_index("Period")
+
+  st.line_chart(data)
+  st.area_chart(data)
+  st.bar_chart(data)
+  st.scatter_chart(data[["Sales", "Profit"]].set_index("Sales"))
+
+  
+  
+option = option_menu("Main Menu", options =["Home", "Settings", "About"],
+                    icons = ["house", "gear", "info-cicle"],
+                    default_index = 0)
+if option == "Home":
+  st.write("You are on the Home page")
+
+elif option == "Settings":
+  st.write("You are on the Settings page")
+
+elif option == "About":
+  st.write("You are on the About page")
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
   
   placeholder = st.empty()
   while True:
